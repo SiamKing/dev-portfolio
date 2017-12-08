@@ -30,7 +30,7 @@ class PortfoliosController < ApplicationController
 
   def create
     @portfolio_item = Portfolio.new(portfolio_params)
-    binding.pry
+    # binding.pry
     respond_to do |format|
       if @portfolio_item.save
         format.html { redirect_to portfolios_path, notice: 'Portfolio item was successfully created.' }
